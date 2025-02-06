@@ -137,65 +137,61 @@ Tal y como se indica en el entrenamiento, hay tres maneras de implementar MFA: c
 
 Adatum le ha pedido a Holly que habilite MFA para todos los usuarios de Microsoft 365, tanto internos como externos. Sin embargo, para probar la implementación del proyecto piloto de Microsoft 365 de Adatum, Holly desea excluir a los miembros del grupo del proyecto piloto de M365 de tener que usar MFA para iniciar sesión. Una vez completado el proyecto piloto, Holly piensa actualizar la directiva quitando la exclusión de este grupo del requisito de MFA. La directiva también incluirá otros dos requisitos. Se requerirá MFA para todas las aplicaciones en la nube y se requerirá MFA incluso aunque los usuarios inicien sesión desde ubicaciones de confianza. 
 
-1. En el ejercicio de laboratorio trabajaste en LON-DC1. En esta tarea, volverás a trabajar en la máquina de cliente 1. <br/>
-
-    Cambia a **LON-CL1**.
-
-2. En la máquina virtual LON-CL1, el **Centro de administración de Microsoft 365** aún debería estar abierto en el explorador Microsoft Edge desde la tarea anterior. Deberías tener la sesión iniciada en Microsoft 365 como **Holly Dickson**.
+1. En la máquina virtual LON-CL1, el **Centro de administración de Microsoft 365** aún debería estar abierto en el explorador Microsoft Edge desde la tarea anterior. Deberías tener la sesión iniciada en Microsoft 365 como **Holly Dickson**.
    
-3. En el **Centro de administración de Microsoft 365**, en la sección **Centros de administración** del panel de navegación, selecciona **Identidad**. Al hacerlo, se abrirá el Centro de administración Microsoft Entra en una nueva pestaña del explorador. Si apareciera una ventana indicando **Seleccionar una cuenta**, selecciona la **cuenta de Holly Dickson**.
+2. En el **Centro de administración de Microsoft 365**, en la sección **Centros de administración** del panel de navegación, selecciona **Identidad**. Al hacerlo, se abrirá el Centro de administración Microsoft Entra en una nueva pestaña del explorador. Si apareciera una ventana indicando **Seleccionar una cuenta**, selecciona la **cuenta de Holly Dickson**.
 
-4. En el **Centro de administración Microsoft Entra**, selecciona **Protección** en el panel de navegación y, a continuación, selecciona **Acceso condicional**.
+3. En el **Centro de administración Microsoft Entra**, selecciona **Protección** en el panel de navegación y, a continuación, selecciona **Acceso condicional**.
 
-5. En la página **Acceso condicional | Información general**, selecciona **Directivas** en el panel de navegación central.
+4. En la página **Acceso condicional | Información general**, selecciona **Directivas** en el panel de navegación central.
 
-6. En la página **Acceso condicional | Directivas**, en la barra de menús de la parte superior de la página, selecciona **+Crear nueva directiva**.
+5. En la página **Acceso condicional | Directivas**, en la barra de menús de la parte superior de la página, selecciona **+Crear nueva directiva**.
 
-7. En la ventana **Nueva directiva de acceso condicional**, escribe **MFA para todos los usuarios de Microsoft 365** en el campo **Nombre**.
+6. En la ventana **Nueva directiva de acceso condicional**, escribe **MFA para todos los usuarios de Microsoft 365** en el campo **Nombre**.
 
-8. Comenzarás definiendo los requisitos de MFA para los usuarios. En el grupo **Usuarios**, selecciona **0 usuarios y grupos seleccionados**. Al hacerlo, se mostrarán dos pestañas: **Incluir** y **Excluir**.
+7. Comenzarás definiendo los requisitos de MFA para los usuarios. En el grupo **Usuarios**, selecciona **0 usuarios y grupos seleccionados**. Al hacerlo, se mostrarán dos pestañas: **Incluir** y **Excluir**.
 
-9. En la pestaña **Incluir**, selecciona **Todos los usuarios**. Observa el mensaje de advertencia que aparece. Se abordará esto en los dos pasos siguientes.
+8. En la pestaña **Incluir**, selecciona **Todos los usuarios**. Observa el mensaje de advertencia que aparece. Se abordará esto en los dos pasos siguientes.
 
-10. Selecciona la pestaña **Excluir**. Para evitar el bloqueo del sistema, tal y como se indicaba en el mensaje de advertencia anterior, tendrás que excluir a los administradores globales (en este caso, Holly). Holly también desea excluir a los demás miembros del grupo del proyecto piloto de Microsoft 365 para realizar pruebas. Una vez que la instancia de Microsoft 365 esté activa en Adatum, Holly quitará el grupo del proyecto piloto de la lista Excluir de esta directiva de acceso condicional y, simplemente, se excluirá a sí misma, al administrador MOD y a algunos otros administradores globales. Pero por ahora, Holly quiere excluir todo el grupo del proyecto piloto. <br/>
+9. Selecciona la pestaña **Excluir**. Para evitar el bloqueo del sistema, tal y como se indicaba en el mensaje de advertencia anterior, tendrás que excluir a los administradores globales (en este caso, Holly). Holly también desea excluir a los demás miembros del grupo del proyecto piloto de Microsoft 365 para realizar pruebas. Una vez que la instancia de Microsoft 365 esté activa en Adatum, Holly quitará el grupo del proyecto piloto de la lista Excluir de esta directiva de acceso condicional y, simplemente, se excluirá a sí misma, al administrador MOD y a algunos otros administradores globales. Pero por ahora, Holly quiere excluir todo el grupo del proyecto piloto. <br/>
 
     Para ello, activa la casilla **Usuarios y grupos**. 
 
-11. En la ventana **Seleccionar usuarios y grupos excluidos** que aparece, selecciona el grupo del proyecto piloto de Microsoft 365. La pestaña **Todos** se muestra de forma predeterminada. Para encontrar rápidamente el grupo del proyecto piloto, selecciona la pestaña **Grupos**. En la lista de grupos activos, activa la casilla situada junto al grupo **Proyecto piloto de M365** y luego selecciona el botón **Seleccionar** de la parte inferior de la ventana. De nuevo en la ventana **Nueva directiva de acceso condicional**, observa el mensaje que aparece en la sección **Usuarios**. 
+10. En la ventana **Seleccionar usuarios y grupos excluidos** que aparece, selecciona el grupo del proyecto piloto de Microsoft 365. La pestaña **Todos** se muestra de forma predeterminada. Para encontrar rápidamente el grupo del proyecto piloto, selecciona la pestaña **Grupos**. En la lista de grupos activos, activa la casilla situada junto al grupo **Proyecto piloto de M365** y luego selecciona el botón **Seleccionar** de la parte inferior de la ventana. De nuevo en la ventana **Nueva directiva de acceso condicional**, observa el mensaje que aparece en la sección **Usuarios**. 
 
-12. Ahora definirás el requisito de MFA para todas las aplicaciones en la nube. En la sección **Recursos de destino**, selecciona **No hay recursos de destino seleccionados**. Al hacerlo, se mostrarán dos pestañas: **Incluir** y **Excluir**.
+11. Ahora definirás el requisito de MFA para todas las aplicaciones en la nube. En la sección **Recursos de destino**, selecciona **No hay recursos de destino seleccionados**. Al hacerlo, se mostrarán dos pestañas: **Incluir** y **Excluir**.
 
-13. Selecciona el campo desplegable **Seleccionar a qué se aplica esta directiva** para ver las distintas opciones en el menú desplegable. Selecciona **Recursos (anteriormente aplicaciones en la nube)** . 
+12. Selecciona el campo desplegable **Seleccionar a qué se aplica esta directiva** para ver las distintas opciones en el menú desplegable. Selecciona **Recursos (anteriormente aplicaciones en la nube)** . 
 
-14. En la pestaña **Incluir**, observa que la configuración predeterminada sea **Ninguno**. Si no cambiaste esta configuración, ninguna aplicación en la nube requeriría MFA (y eso incluye a Microsoft 365). Por lo tanto, incluso si creaste esta directiva y seleccionaste la opción para requerir MFA para todos los usuarios, pero dejaste esta configuración de **Recursos de destino** en **Ninguno**, cualquier usuario que inicie sesión en Microsoft 365 no tendría que usar MFA. <br/>
+13. En la pestaña **Incluir**, observa que la configuración predeterminada sea **Ninguno**. Si no cambiaste esta configuración, ninguna aplicación en la nube requeriría MFA (y eso incluye a Microsoft 365). Por lo tanto, incluso si creaste esta directiva y seleccionaste la opción para requerir MFA para todos los usuarios, pero dejaste esta configuración de **Recursos de destino** en **Ninguno**, cualquier usuario que inicie sesión en Microsoft 365 no tendría que usar MFA. <br/>
 
     En la pestaña **Incluir**, selecciona la opción **Seleccionar recursos**. Al hacerlo, se muestran dos secciones: **Editar filtro** y **Seleccionar**. En la sección **Seleccionar**, selecciona **Ninguna**. 
 
-15. En el panel **Seleccionar recursos** que aparece, desplázate hacia abajo por la lista de aplicaciones para ver todas las distintas aplicaciones para las que se podría requerir MFA. **NO seleccione ninguna de las aplicaciones.** Queremos que te desplaces por esta lista para que veas el grado de granularidad que obtienes al requerir MFA, si decides limitar MFA a determinadas aplicaciones en las implementaciones del mundo real.  <br/>
+14. En el panel **Seleccionar recursos** que aparece, desplázate hacia abajo por la lista de aplicaciones para ver todas las distintas aplicaciones para las que se podría requerir MFA. **NO seleccione ninguna de las aplicaciones.** Queremos que te desplaces por esta lista para que veas el grado de granularidad que obtienes al requerir MFA, si decides limitar MFA a determinadas aplicaciones en las implementaciones del mundo real.  <br/>
 
     Para Adatum, Holly desea requerir MFA para todas las aplicaciones en la nube, lo que normalmente es un escenario empresarial más común que seleccionar aplicaciones específicas. En la pestaña **Incluir**, selecciona **Todos los recursos (anteriormente "Todas las aplicaciones en la nube")** Adatum no excluirá ninguna aplicación en la nube de la autenticación MFA. Es posible seleccionar la pestaña **Excluir** si deseas ver las opciones que proporciona. Funciona básicamente de la misma forma que la pestaña **Incluir**. Es posible ver esta pestaña, pero NO selecciones ninguna aplicación en la nube para su exclusión. 
 
-16. Por último, definirás el requisito de MFA para todas las ubicaciones de inicio de sesión de usuario. En algunos escenarios, las organizaciones podrían requerir MFA solamente si un usuario iniciase sesión desde una ubicación que no fuera de confianza. Sin embargo, Adatum quiere requerir MFA para todos los usuarios incluidos, independientemente de la ubicación desde la que inicien sesión. <br/>
+15. Por último, definirás el requisito de MFA para todas las ubicaciones de inicio de sesión de usuario. En algunos escenarios, las organizaciones podrían requerir MFA solamente si un usuario iniciase sesión desde una ubicación que no fuera de confianza. Sin embargo, Adatum quiere requerir MFA para todos los usuarios incluidos, independientemente de la ubicación desde la que inicien sesión. <br/>
 
     En **Condiciones**, selecciona **0 condiciones seleccionadas**. Al hacerlo, se mostrará una lista de posibles condiciones en las que se comprobará la directiva. Para este ejercicio de laboratorio, en la condición **Ubicaciones**, selecciona **Sin configurar**. Al hacerlo, se mostrará un botón de alternancia **Configurar** y dos pestañas: **Incluir** y **Excluir**. Ambas pestañas están deshabilitadas actualmente.
 
-17. Establece el botón de alternancia **Configurar** en **Sí**, lo que habilitará las dos pestañas. 
+16. Establece el botón de alternancia **Configurar** en **Sí**, lo que habilitará las dos pestañas. 
 
-18. En la pestaña **Incluir**, comprueba que se haya seleccionado **Cualquier red o ubicación** (selecciónalo si es necesario). Selecciona la pestaña **Excluir**. Si la organización reconociera direcciones IP específicas o intervalos de direcciones como "de confianza", será posible excluir el requisito de MFA cuando un usuario inicie sesión desde una de esas ubicaciones. Sin embargo, Adatum desea requerir MFA para todos los intentos de inicio de sesión del usuario, independientemente de su ubicación. Esto incluirá inicios de sesión de usuario internos y externos. Comprueba que la opción **Redes y ubicaciones seleccionadas** está seleccionada y, en la sección **Seleccionar**, comprueba que indica **Ninguno**. Al no especificar ninguna ubicación seleccionada, esta configuración garantizará que ninguna ubicación se excluya de MFA. 
+17. En la pestaña **Incluir**, comprueba que se haya seleccionado **Cualquier red o ubicación** (selecciónalo si es necesario). Selecciona la pestaña **Excluir**. Si la organización reconociera direcciones IP específicas o intervalos de direcciones como "de confianza", será posible excluir el requisito de MFA cuando un usuario inicie sesión desde una de esas ubicaciones. Sin embargo, Adatum desea requerir MFA para todos los intentos de inicio de sesión del usuario, independientemente de su ubicación. Esto incluirá inicios de sesión de usuario internos y externos. Comprueba que la opción **Redes y ubicaciones seleccionadas** está seleccionada y, en la sección **Seleccionar**, comprueba que indica **Ninguno**. Al no especificar ninguna ubicación seleccionada, esta configuración garantizará que ninguna ubicación se excluya de MFA. 
 
-19. En la sección **Controles de acceso**, en el grupo **Conceder**, selecciona **0 controles seleccionados**. Al hacerlo, se mostrará un panel **Conceder**.
+18. En la sección **Controles de acceso**, en el grupo **Conceder**, selecciona **0 controles seleccionados**. Al hacerlo, se mostrará un panel **Conceder**.
 
-20. En el panel **Conceder** que aparecerá, comprueba que la opción **Conceder acceso** esté seleccionada (selecciónala si fuera necesario). Observa todos los controles de acceso disponibles que se pueden habilitar con esta directiva. Esta directiva solo requerirá MFA, por lo que activa la casilla **Requerir autenticación multifactor**. Selecciona el botón **Seleccionar** situado en la parte inferior del panel **Conceder**, que cierra el panel. 
+19. En el panel **Conceder** que aparecerá, comprueba que la opción **Conceder acceso** esté seleccionada (selecciónala si fuera necesario). Observa todos los controles de acceso disponibles que se pueden habilitar con esta directiva. Esta directiva solo requerirá MFA, por lo que activa la casilla **Requerir autenticación multifactor**. Selecciona el botón **Seleccionar** situado en la parte inferior del panel **Conceder**, que cierra el panel. 
 
-21. En la parte inferior de la ventana **Nueva directiva de acceso condicional**, en el campo **Habilitar directiva**, selecciona **Activar**.
+20. En la parte inferior de la ventana **Nueva directiva de acceso condicional**, en el campo **Habilitar directiva**, selecciona **Activar**.
 
-22. Observa el mensaje de advertencia y las opciones que aparecen en la parte inferior de la página que le advierten de no autobloquearse. Selecciona la opción **Entiendo que mi cuenta se verá afectada por esta directiva. Continuar de todos modos.** De hecho, Holly no se verá afectada, ya que es miembro del grupo del proyecto piloto de M365 que se excluye de esta directiva.
+21. Observa el mensaje de advertencia y las opciones que aparecen en la parte inferior de la página que le advierten de no autobloquearse. Selecciona la opción **Entiendo que mi cuenta se verá afectada por esta directiva. Continuar de todos modos.** De hecho, Holly no se verá afectada, ya que es miembro del grupo del proyecto piloto de M365 que se excluye de esta directiva.
 
-23. Haz clic en el botón **Crear** para crear la directiva.
+22. Haz clic en el botón **Crear** para crear la directiva.
 
-24. En la ventana **Acceso condicional | Directivas** que aparece, comprueba que la directiva **MFA para todos los usuarios de Microsoft 365** aparezca y que su **Estado** esté establecido en **Activado**.
+23. En la ventana **Acceso condicional | Directivas** que aparece, comprueba que la directiva **MFA para todos los usuarios de Microsoft 365** aparezca y que su **Estado** esté establecido en **Activado**.
 
-25. Permanece conectado a LON-CL1 con todas las pestañas del explorador de Microsoft Edge abiertas para la siguiente tarea.
+24. Permanece conectado a LON-CL1 con todas las pestañas del explorador de Microsoft Edge abiertas para la siguiente tarea.
 
 
 ### Tarea 4: Prueba de MFA para un usuario incluido y uno excluido
@@ -331,13 +327,13 @@ El director de tecnología está ansioso por implementar Smart Lockout porque bl
 
 16. En el explorador, cierra la pestaña **Cambiar contraseña**. 
 
-17. Ahora probarás la funcionalidad del umbral de bloqueo. Lo hará con la cuenta de Laura Atkin, que creaste en un ejercicio de laboratorio anterior. Selecciona el icono de usuario de Holly Dickson de la esquina superior derecha de la pantalla y, en el menú que aparece, selecciona **Cerrar sesión**.  
+17. Ahora probarás la funcionalidad del umbral de bloqueo. Vas a hacerlo con la cuenta de Adele Vance. Selecciona el icono de usuario de Holly Dickson de la esquina superior derecha de la pantalla y, en el menú que aparece, selecciona **Cerrar sesión**.  
 
 18. Una vez que hayas cerrado la sesión como Holly, aparecerá la ventana **Selección de la cuenta** en la pestaña **Inicio de sesión en Microsoft Entra**. Como procedimiento recomendado al cerrar sesión de un servicio en línea de Microsoft como un usuario y volver a iniciar sesión como otro, cierra todas las pestañas del explorador, excepto **Cerrar sesión** o **Iniciar sesión**. En este caso, cierra las demás pestañas ahora y deja abierta la pestaña **Iniciar sesión**.  <br/>
 
     En la ventana **Elegir una cuenta**, selecciona **Usar otra cuenta**. 
 
-19. En la ventana **Iniciar sesión**, escribe **laura@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino que te asignó el proveedor de hospedaje de laboratorio) y luego selecciona **Siguiente**. 
+19. En la ventana **Iniciar sesión**, escribe **adelev@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino que te asignó el proveedor de hospedaje de laboratorio) y luego selecciona **Siguiente**. 
 
 20. En la ventana **Escribir contraseña**, escribe cualquier combinación aleatoria de letras y números y, a continuación, selecciona **Iniciar sesión**. Observa el mensaje de error de contraseña no válida que aparece. 
 
@@ -345,14 +341,14 @@ El director de tecnología está ansioso por implementar Smart Lockout porque bl
     
     Como estableció el **Umbral de bloqueo** en **3**, deberías recibir un mensaje de error indicando que esta cuenta está bloqueada después del tercer intento erróneo de inicio de sesión. <br/>
 
-    **Nota:** si no recibieras este mensaje de bloqueo después del tercer intento, el sistema aún no habrá terminado de propagar este cambio de umbral de bloqueo a lo largo del servicio. Es posible que el cambio tarde varios minutos en aplicarse. Espera unos minutos y vuelve a iniciar sesión con una contraseña ficticia. Las pruebas de este laboratorio mostraron resultados variables. El cambio a veces se propaga casi inmediatamente para que se produzca el bloqueo después del tercer intento de inicio de sesión. Otras veces pasaron entre 5 y 10 minutos antes de mostrar el mensaje de bloqueo. Continúa este proceso hasta recibir el mensaje de bloqueo, momento en el que la cuenta de Laura se bloqueará temporalmente para evitar el acceso no autorizado.
+    **Nota:** si no recibieras este mensaje de bloqueo después del tercer intento, el sistema aún no habrá terminado de propagar este cambio de umbral de bloqueo a lo largo del servicio. Es posible que el cambio tarde varios minutos en aplicarse. Espera unos minutos y vuelve a iniciar sesión con una contraseña ficticia. Las pruebas de este laboratorio mostraron resultados variables. El cambio a veces se propaga casi inmediatamente para que se produzca el bloqueo después del tercer intento de inicio de sesión. Otras veces pasaron entre 5 y 10 minutos antes de mostrar el mensaje de bloqueo. Continúa este proceso hasta que recibas el mensaje de bloqueo, momento en el que la cuenta de Adele se bloqueará temporalmente para evitar el acceso no autorizado.
 
-21. Se te impedirá iniciar sesión de nuevo como Laura hasta que pase la **duración del bloqueo de 90 segundos** que estableciste anteriormente. <br/>
+21. Se te impedirá iniciar sesión de nuevo como Adele hasta que pase la **duración del bloqueo de 90 segundos** que estableciste anteriormente. <br/>
 
-    Una vez que se produzca el bloqueo, espera 90 segundos y vuelve a iniciar sesión como **laura@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino que te ha asignado el proveedor de hospedaje del laboratorio). En el campo **Contraseña**, escribe la contraseña de Laura, que es la nueva contraseña de usuario que asignaste a la cuenta de Laura al crearla. 
+    Una vez que se produzca el bloqueo, espera 90 segundos y vuelve a iniciar sesión como **adelev@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino que te ha asignado el proveedor de hospedaje del laboratorio). En el campo **Contraseña**, escribe la contraseña de Adele, que es la contraseña de usuario proporcionada por el proveedor de hospedaje del laboratorio. 
 
-22. Dado que MFA está habilitado para todos los usuarios, excepto para los miembros del grupo del proyecto piloto de M365 (del que Adele no es miembro), aparecerá una ventana **Se necesita más información** para que puedas completar el proceso MFA para Laura. Esta es la comprobación de que el intento de inicio de sesión con la contraseña real de Laura se realizó correctamente.  <br>
+22. Dado que MFA está habilitada para todos los usuarios, excepto para los miembros del grupo de proyectos piloto de M365 (del que Adele no es miembro), aparecerá una ventana **Se necesita más información** para que puedas completar el proceso MFA para Adele. Esta es la comprobación de que tu intento de inicio de sesión con la contraseña real de Adele se realizó correctamente.  <br>
 
-    **Nota:** NO es necesario completar el proceso MFA para Laura, ya que este es el último ejercicio de laboratorio mediante el controlador de dominio LON-DC1. Puedes cerrar todas las aplicaciones en LON-DC1.
+    **Nota:** NO es necesario completar el proceso de MFA para Adele, ya que este es el último ejercicio de laboratorio mediante el controlador de dominio LON-DC1. Puedes cerrar todas las aplicaciones en LON-DC1.
 
 # Continuar con el laboratorio 2: ejercicio 2
