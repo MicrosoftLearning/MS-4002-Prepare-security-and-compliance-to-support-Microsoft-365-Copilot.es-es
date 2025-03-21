@@ -213,7 +213,7 @@ En este ejercicio, crearás una etiqueta de confidencialidad y la agregarás a l
 
 42. En la página **Nueva directiva creada**, seleccione **Listo**.
 
-43. Deje el explorador Edge abierto junto con todas las pestañas. 
+43. Deja el explorador Edge abierto junto con todas las pestañas. 
 
 
 ### Tarea 4: Asignar una etiqueta de confidencialidad preexistente a un documento
