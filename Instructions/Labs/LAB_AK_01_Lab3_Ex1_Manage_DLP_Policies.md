@@ -131,7 +131,7 @@ El problema con esta característica es que las directivas DLP no tienen en cuen
 
 Para desactivar esta configuración, deberás crear una directiva para aplicaciones de Office en el Centro de administración de Microsoft Intune. En la directiva que crearás, agregarás la configuración **Desactivar enviar a Kindle** a la directiva y, a continuación, habilitarás esta configuración. Al habilitar esta configuración en la directiva, se desactiva la característica **Enviar a Kindle** una vez que termines de crear la directiva. En ese momento, los usuarios ya no podrán enviar documentos de Word a su biblioteca de Kindle.
 
-**Nota:** este problema es algo que debes considerar abordar en las implementaciones reales de Microsoft 365. Para obtener más información sobre la característica **Enviar a Kindle**, consulta https://support.microsoft.com/en-us/office/send-to-kindle-a53d880d-9952-4bf1-abc5-6bce8db5a273.
+**Nota:** este problema es algo que debes considerar abordar en las implementaciones reales de Microsoft 365. Para obtener más información sobre la característica **Enviar a Kindle**, consulta https://support.microsoft.com/office/send-to-kindle-a53d880d-9952-4bf1-abc5-6bce8db5a273.
 
 1. En LON-CL1, en el explorador Edge, todavía deberías tener la sesión iniciada en Microsoft 365 como **Holly Dickson**. 
 
