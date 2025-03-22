@@ -13,7 +13,7 @@ Para implementar etiquetas de confidencialidad como parte del proyecto piloto en
 
     Todavía deberías tener la sesión iniciada en LON-CL1 como la cuenta de **adatum\administrator** y, en el explorador Edge, todavía deberías tener la sesión iniciada en Microsoft 365 como **Holly Dickson**. 
 
-2. En **Microsoft Edge**, abre una nueva pestaña y escribe (o copia y pega) la siguiente dirección URL en la barra de direcciones: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
+2. En **Microsoft Edge**, abre una nueva pestaña y escribe (o copia y pega) la siguiente dirección URL en la barra de direcciones: **https://www.microsoft.com/download/details.aspx?id=53018** <br/>
 
     Esto iniciará la descarga del cliente de **Microsoft Purview Information Protection**.
 
