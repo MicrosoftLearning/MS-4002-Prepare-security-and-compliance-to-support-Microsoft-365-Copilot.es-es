@@ -62,7 +62,7 @@ A lo largo de los laboratorios de este curso, asumirás el rol de Holly Dickson
 
 10. Si un cuadro de diálogo **¿Mantener la sesión iniciada?** apareciera, activa la casilla **No volver a mostrar** y, a continuación, activa **Sí.** 
 
-11. Si aparece un cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, ten en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, selecciona el icono de flecha hacia delante (**>**) dos veces y, a continuación, selecciona el icono de marca de verificación para avanzar a través de las diapositivas de esta ventana de mensajes. 
+11. Si aparece el cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, ten en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, selecciona el icono de flecha hacia delante (**>**) dos veces y, a continuación, selecciona el icono de marca de verificación para avanzar a través de las diapositivas de esta ventana de mensajes. 
 
 12. Si aparece un cuadro de diálogo **Buscar más aplicaciones** o **Crear con Microsoft 365**, selecciona la **X** de la esquina superior de los cuadros para cerrarlos. Del mismo modo, si aparece un cuadro de diálogo Iniciar sesión en Microsoft Edge, selecciona el botón **No, gracias**.
 
